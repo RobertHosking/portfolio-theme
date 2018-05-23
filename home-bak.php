@@ -22,7 +22,6 @@ echo "
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
 
 #name{
-margin-top:0;
 padding-top: 0.1em;
 padding-bottom: 0.1em;
 padding-left: 0.2em;
@@ -30,7 +29,7 @@ color:#fff;
 line-height: 1.8em;
 font-family: 'Open Sans';
         letter-spacing: .5em;
-        font-size:5vw;
+        font-size:2.5em;
         text-align: center;
     }
 #name span{
@@ -45,7 +44,7 @@ background-color: rgba(255,238,88, 0.8);
         text-align:center;
     }
 
-.center-header {
+.center {
       width: 100%;
         margin: 0 auto;
     top: 40%;
@@ -55,7 +54,6 @@ background-color: rgba(255,238,88, 0.8);
 
 .centered{
     position: relative;
-    margin-top: 10vh;
     text-align:center;
    
      background-image: url('http://67.207.88.196/f/image.png');
@@ -64,8 +62,9 @@ background-color: rgba(255,238,88, 0.8);
              background-size: 50%;
 
          background-clip: padding-box;
-         }
-         
+}
+
+
 #callout{
 
 border-style: solid;
@@ -75,9 +74,9 @@ top: 100%;
 right: ;
 }
 
-h1{
-    text-align:center;
-    margin-top:4em;
+#callout h1{
+
+padding: .4em;
 }
 
 #hide{
@@ -92,42 +91,10 @@ opacity:0;
 </style>
         <div class='centered'>
         <img src='http://67.207.88.196/f/image.png' width='60%' id='hide'>
-        <div class='center-header'>
+        <div class='center'>
        <h1 id='name'><span>ROBERT HOSKING</span></h1>
        </div>
        </div>
-     <div class='entry-content'> 
+       ";
 
-     <h6 style='text-align:center'>Welcome. Have a look around. I don't mind.</h6>
-     <h1>I do web design.</h1>
-     <img src='http://67.207.88.196/f/macbook_pro_15.jpg' width='100%'>
-     <br>
-     <br>
-     <br>
-     <p style='text-align: center;'>
-     ";
-
-echo do_shortcode("[maxbutton id='1' text='Explore More' url='https://roberthosking.com/projects']");
-echo "
-    </p>
-    <h1>I take photos.</h1>
-    <img src='http://67.207.88.196/f/polaroid-photos.jpg' width='100%'>
-
-    <br>
-    <br>
-    <br>
-     <p style='text-align: center;'>
-     ";
-
-echo do_shortcode("[maxbutton id='1' text='Explore More' url='https://roberthosking.com/photography']");
-
-echo "
-    </p>
-<h1>I blog.</h1>
-      ";
-echo do_shortcode("[wp_show_posts id='721']");
-
-
-
-echo "</div>"; //entry-content
 get_footer();

@@ -28,9 +28,7 @@
 			<div class="site-info">
 
                 <span class="site-title">
-                <?php echo do_shortcode('[aps-social id="1"]')?>
 <br>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">&copy; <?php echo esc_html( date_i18n( __( 'Y', 'york-lite' ) ) ); ?> <?php bloginfo( 'name' ); ?></a>
 				</span>
 
 				<span class="site-theme">

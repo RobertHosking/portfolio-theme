@@ -49,7 +49,7 @@ TABLE OF CONTENTS:
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -272,7 +272,7 @@ textarea {
   font-size: 16px;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.8);
-  font-family: "Lora", "Georgia", serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: normal;
   line-height: 28px;
 }
@@ -295,7 +295,14 @@ body {
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
 }
-
+#read{
+font-size:16px !important;
+font-size: 1rem !important;
+color: rgba(0,0,0,0.8) !important;
+font-family: "Open Sans" !important;
+font-weight: normal !important;
+line-height: 28px !important;
+}
 h1,
 h2,
 h3,
@@ -304,9 +311,9 @@ h5,
 h6 {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: "Playfair Display", "Georgia", serif;
+  font-family: "Open Sans", "Arial", serif;
   clear: both;
-  font-weight: 400;
+  font-weight: 700;
   margin: 0;
   text-rendering: optimizeLegibility;
 }
@@ -1252,7 +1259,7 @@ a:hover, a:active {
 .main-navigation a {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: "Playfair Display", "Georgia", serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
 }
 
@@ -3037,7 +3044,7 @@ p.attachment a {
   line-height: 1.4em;
   margin: 15% auto 11%;
   padding: 5% 0;
-  font-family: "Playfair Display", "Georgia", serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
 }
 
@@ -3511,7 +3518,7 @@ p.attachment a {
 .widget-title {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: "Playfair Display", "Georgia", serif;
+  font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 400;
 }
 
