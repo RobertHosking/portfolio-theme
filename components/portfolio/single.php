@@ -16,7 +16,6 @@
 
 		<div class="entry-meta">
 
-			<?php york_portfolio_categories(); ?>
 
 			<?php the_meta(); ?>
 

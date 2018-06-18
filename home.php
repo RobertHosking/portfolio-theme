@@ -37,22 +37,23 @@ font-family: 'Open Sans';
 padding-left:0.2em;
 background-color: rgba(255,238,88, 0.8);
 }
-
     #label{
         font-family: 'Open Sans';
         letter-spacing: 0.5em;
         font-size: 1em;
         text-align:center;
     }
-
 .center-header {
-      width: 100%;
-        margin: 0 auto;
+    
+margin-left:-355px;
+  animation: slidein 7s;
+    margin: 0 auto;
     top: 40%;
     position: absolute;
     display: block;
+  overflow:hidden;
+  white-space:nowrap;
 }
-
 .centered{
     position: relative;
     margin-top: 10vh;
@@ -65,26 +66,29 @@ background-color: rgba(255,238,88, 0.8);
 
          background-clip: padding-box;
          }
-         
 #callout{
-
 border-style: solid;
     border-width: 5px;
 position:absolute;
 top: 100%;
 right: ;
 }
-
 h1{
     text-align:center;
     margin-top:4em;
 }
-
 #hide{
-
 opacity:0;
 }
 
+
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
 /*  
     <div id='callout'><h1>Designer</h1></div> 
 
@@ -127,7 +131,26 @@ echo "
       ";
 echo do_shortcode("[wp_show_posts id='721']");
 
+echo "<br><br><br> <p style='text-align:center'>";
+
+echo do_shortcode("[maxbutton id='1' text='Explore More' url='https://roberthosking.com/blog']");
+
+echo "</p></div>"; //entry-content
 
 
-echo "</div>"; //entry-content
+echo '
+    
+    <br>
+    <br>
+    <br>
+    <div class="entry-content"><h2 style="text-align: center;">Call Me</h2>
+    <img class="aligncenter size-large wp-image-693" src="https://roberthosking.com/wp-content/uploads/2018/05/antique-black-classic-163007-1-1024x505.jpg" alt="" width="700" height="345" />
+    <br>
+    <div id="u26876-4" class="Paragraph-Style clearfix colelem" data-muse-uid="U26876" data-muse-type="txt_frame" data-ibe-flags="txtStyleSrc">
+
+    If you are interested in working with me on a project or have an idea you would just like to discuss please don\'t hesitate to drop me a message or "call me".
+
+    </div>
+    <br>
+    <p style="text-align: center;">+    1    4    2    4    3    3    3    1    6    1    1</p></div>';
 get_footer();
