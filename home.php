@@ -102,7 +102,7 @@ opacity:0;
        </div>
      <div class='entry-content'> 
 
-     <h6 style='text-align:center'>Welcome. Have a look around. I don't mind.</h6>
+     <blockquote><p style='text-align:center'>Welcome. Have a look around. I don't mind.</p></blockquote>
      <h1>I do web design.</h1>
      <img src='http://67.207.88.196/f/macbook_pro_15.jpg' width='100%'>
      <br>
@@ -144,7 +144,7 @@ echo '
     <br>
     <br>
     <div class="entry-content"><h2 style="text-align: center;">Call Me</h2>
-    <img class="aligncenter size-large wp-image-693" src="https://roberthosking.com/wp-content/uploads/2018/05/antique-black-classic-163007-1-1024x505.jpg" alt="" width="700" height="345" />
+    <img class="aligncenter size-large wp-image-693" src="https://roberthosking.com/wp-content/uploads/2018/06/antique-black-classic-163007-1-1024x505.jpg" alt="" width="700" height="345" />
     <br>
     <div id="u26876-4" class="Paragraph-Style clearfix colelem" data-muse-uid="U26876" data-muse-type="txt_frame" data-ibe-flags="txtStyleSrc">
 

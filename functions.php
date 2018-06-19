@@ -440,7 +440,12 @@ function yearsExperience_func( $atts ) {
 }
 add_shortcode( 'since', 'yearsExperience_func' );
 
-
+function add_scriptfilter( $string ) {
+    global $allowedtags;
+    $allowedtags['script'] = array( 'src' => array () );
+    return $string;
+}
+add_filter( 'pre_kses', 'add_scriptfilter' );
 
 
 

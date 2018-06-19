@@ -36,80 +36,11 @@ $size_class = get_post_meta( $post->ID, '_bean_portfolio_grid_size', true );
         }        
         }else{
           $split = explode(" ", $tags);
-         $banner .= '<div class="line"><span>'.strtoupper($split[0])." <span style='font-weight:300'>".strtoupper($split[1])."</span></span></div>";
+         $banner .= '<div class="line"><span style="font-weight:300">'.strtoupper($split[0])."</span> <span>".strtoupper($split[1])."</span></div>";
         }
         $banner .= "</div>";
         echo '
 
-    <style>
-    @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800");
-
-#name{
-margin-top:0;
-padding-top: 0.1em;
-padding-bottom: 0.1em;
-padding-left: 0.2em;
-color:#fff;
-line-height: 1.8em;
-font-family: "Open Sans";
-        letter-spacing: .5em;
-        font-size:5vw;
-        text-align: center;
-    }
-#name span{
-padding-left:0.2em;
-background-color: rgba(255,238,88, 0.8);
-}
-    #label{
-        font-family: "Open Sans";
-        letter-spacing: 0.5em;
-        font-size: 1em;
-        text-align:center;
-    }
-.center-header {
-    margin: 0 auto;
-    top: 40%;
-    position: absolute;
-    display: block;
-}
-.centered{
-    position: relative;
-    margin-top: 10vh;
-    text-align:center;
-         background-repeat: no-repeat;
-         background-position: 50% 50%;
-             background-size: 100%;
-         background-clip: padding-box;
-         }
-#callout{
-border-style: solid;
-    border-width: 5px;
-position:absolute;
-top: 100%;
-right: ;
-}
-h1{
-    text-align:center;
-    margin-top:4em;
-}
-#hide{
-opacity:0;
-}
-.banner{
-    position:absolute;
-    bottom: 0px;
-    right: 0px;
-    font-size: 5vw;
-    font-family:"Open Sans";
-    text-align: right;
-    line-height: 1em;
-    font-weight: 300;
-
-}
-.banner .line:last-of-type{
-font-weight: 800;
-}
-</style>        
  <div class="centered" style="background-image: url(\''.get_the_post_thumbnail_url().'\')">
             <a href="'.get_the_permalink().'" data-id="'.get_the_ID().'" >        
                 <img width="100%" id="hide" src="'.get_the_post_thumbnail_url().'"/>
