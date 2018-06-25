@@ -18,6 +18,7 @@ get_header();
 
 
 echo "
+
     <style>
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
 
@@ -59,10 +60,10 @@ margin-left:-355px;
     margin-top: 10vh;
     text-align:center;
    
-     background-image: url('http://67.207.88.196/f/image.png');
+     background-image: url('https://roberthosking.com/wp-content/uploads/2018/06/image.png');
          background-repeat: no-repeat;
          background-position: 50% 50%;
-             background-size: 50%;
+             background-size: 40%;
 
          background-clip: padding-box;
          }
@@ -80,7 +81,11 @@ h1{
 #hide{
 opacity:0;
 }
-
+@media only screen and (min-width: 960px) {
+#page{
+background:url('https://roberthosking.com/wp-content/uploads/2018/06/s0957757_sc7.png') no-repeat left bottom, url('https://roberthosking.com/wp-content/uploads/2018/06/sdfasdfads.png') no-repeat right bottom;
+}
+}
 
 
 @keyframes slidein {
@@ -92,19 +97,32 @@ opacity:0;
 /*  
     <div id='callout'><h1>Designer</h1></div> 
 
-*/
+ */
+#social img{
+margin:.5em;
+}
 </style>
         <div class='centered'>
-        <img src='http://67.207.88.196/f/image.png' width='60%' id='hide'>
+        <img src='https://roberthosking.com/wp-content/uploads/2018/06/image.png' width='60%' id='hide'>
         <div class='center-header'>
        <h1 id='name'><span>ROBERT HOSKING</span></h1>
        </div>
        </div>
-     <div class='entry-content'> 
-
+       <div class='entry-content'>
+<div id='social' style='text-align:center;'>
+<a target='_blank' href='https://www.github.com/roberthosking'>
+<img src='https://roberthosking.com/wp-content/uploads/2018/06/GitHub-Mark-64px.png' />
+</a>
+<a target='_blank' href='https://www.instagram.com/robert_hosking'>
+<img src='https://roberthosking.com/wp-content/uploads/2018/06/instagram-icon-white-on-black-circle.png' />
+</a>
+<a target='_blank' href='https://www.linkedin.com/in/robhossboss'>
+<img src='https://roberthosking.com/wp-content/uploads/2018/06/linkedin_circle_black-512.png'/>
+</a>
+</div>
      <blockquote><p style='text-align:center'>Welcome. Have a look around. I don't mind.</p></blockquote>
      <h1>I do web design.</h1>
-     <img src='http://67.207.88.196/f/macbook_pro_15.jpg' width='100%'>
+     <img src='https://roberthosking.com/wp-content/uploads/2018/06/macbook_pro_15.jpg' width='100%'>
      <br>
      <br>
      <br>
@@ -115,7 +133,7 @@ echo do_shortcode("[maxbutton id='1' text='Explore More' url='https://roberthosk
 echo "
     </p>
     <h1>I take photos.</h1>
-    <img src='http://67.207.88.196/f/polaroid-photos.jpg' width='100%'>
+    <img src='https://roberthosking.com/wp-content/uploads/2018/06/polaroid-photos.jpg' width='100%'>
 
     <br>
     <br>
@@ -138,19 +156,5 @@ echo do_shortcode("[maxbutton id='1' text='Explore More' url='https://roberthosk
 echo "</p></div>"; //entry-content
 
 
-echo '
     
-    <br>
-    <br>
-    <br>
-    <div class="entry-content"><h2 style="text-align: center;">Call Me</h2>
-    <img class="aligncenter size-large wp-image-693" src="https://roberthosking.com/wp-content/uploads/2018/06/antique-black-classic-163007-1-1024x505.jpg" alt="" width="700" height="345" />
-    <br>
-    <div id="u26876-4" class="Paragraph-Style clearfix colelem" data-muse-uid="U26876" data-muse-type="txt_frame" data-ibe-flags="txtStyleSrc">
-
-    If you are interested in working with me on a project or have an idea you would just like to discuss please don\'t hesitate to drop me a message or "call me".
-
-    </div>
-    <br>
-    <p style="text-align: center;">+    1    4    2    4    3    3    3    1    6    1    1</p></div>';
 get_footer();

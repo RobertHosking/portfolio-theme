@@ -1,0 +1,5 @@
+#!/bin/bash
+END=100000000
+for ((i=9999999;i<=END;i++)); do
+    wget https://images.gr-assets.com/books/1424470366l/$i.jpg
+done
