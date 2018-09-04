@@ -60,7 +60,7 @@ margin-left:-355px;
     margin-top: 10vh;
     text-align:center;
    
-     background-image: url('https://roberthosking.com/wp-content/uploads/2018/06/image.png');
+     background-image: url('https://roberthosking.com/wp-content/uploads/2018/07/image.png');
          background-repeat: no-repeat;
          background-position: 50% 50%;
              background-size: 40%;
@@ -103,7 +103,7 @@ margin:.5em;
 }
 </style>
         <div class='centered'>
-        <img src='https://roberthosking.com/wp-content/uploads/2018/06/image.png' width='60%' id='hide'>
+        <img src='https://roberthosking.com/wp-content/uploads/2018/07/image.png' width='60%' id='hide'>
         <div class='center-header'>
        <h1 id='name'><span>ROBERT HOSKING</span></h1>
        </div>

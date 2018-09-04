@@ -502,3 +502,5 @@ require get_parent_theme_file_path( '/inc/plugins.php' );
  * Load CMB2 compatibility file.
  */
 require get_theme_file_path( '/inc/metaboxes.php' );
+add_filter( 'auto_update_plugin', '__return_true' );
+add_filter( 'auto_update_theme', '__return_true' );

@@ -19,7 +19,44 @@ array_push($queue, [$image, $track, $artist, $nowplaying]);
 
 }
 
+if($queue[0][3]==true){
 
+
+$search_for = $queue[0][1]." ".$queue[0][2]; 
+
+include_once("wp-config.php");
+include_once("wp-includes/wp-db.php");
+global $wpdb;
+$req = $wpdb->get_results("select refresh from spotify_token;", OBJECT);
+$refresh = $req[0]->refresh;
+//$auth = "BQBBGwSEJbZ_AaNtZBDhvP_yfLFyCysd-d39Ll9fSTxm8K7gsnneRHV7zLk_gP09hrW1x2OKh837adUYY7bYSfDgSpALfcle1Jd4iM87yI3CQKt9oVLxAx2a2dToYg2IEXKmkNewVpYcyF5M-44";
+
+$context = stream_context_create(array('http' => array(
+					'header' => array(
+						"Content-Type: application/x-www-form-urlencoded",
+						"Authorization: Basic YTJkZDk3NTJlN2E3NDY3YzliZDk5NTQxOTAyOTExYjI6YzcwOTAyYWYxYTlhNGNhNTk3ODU1MGExMzg2NmRiNzE="),
+						'method'=>"POST"
+					    )
+					));
+$url = "https://accounts.spotify.com/api/token?grant_type=refresh_token&refresh_token=".$refresh;
+$resp=file_get_contents($url, false ,$context);
+$auth = json_decode($resp, true)["access_token"];
+$refresh = json_decode($resp, true)["refresh_token"];
+
+$context = stream_context_create(['http' => ['header' => ["Accept: application/json","Content-Type: application/json","Authorization: Bearer ".$auth]]]);
+
+
+$url = "https://api.spotify.com/v1/search?q=".urlencode($search_for)."&type=track&market=US";
+$homepage = file_get_contents($url, false, $context );
+$res = json_decode($homepage, true);
+$preview_url = ($res['tracks']['items'][0]["preview_url"]);
+
+if($refresh!='')
+$wpdb->insert('spotify_token', array(
+  'access' => $auth,
+  'refresh' => $refresh
+));
+	}	
 ?>
 <style>
 .wrapper {
@@ -126,6 +163,13 @@ font-weight: 800;
 padding-right: 5px;
 padding-left: 5px;
 }
+
+#player-control{
+cursor:pointer;
+position: absolute;
+top: 40.32%;
+left:40.32%;
+}
 </style>
 
 
@@ -152,6 +196,47 @@ padding-left: 5px;
 </div>
 
 <p id="play">NOW PLAYING</p>
+
+
+
+   <script>
+  function play(){
+       var audio = document.getElementById("audio");
+ 
+audio.addEventListener("ended", function(){
+audio.pause();
+document.getElementById("player-control").src = "https://roberthosking.com/wp-content/uploads/2018/09/256-256-7f94cbb88c4da5c5dsdsd4660a475d0d33b6.png";
+
+audio.currentTime = 0;
+     console.log("ended");
+});
+
+
+      
+if (audio.duration > 0 && !audio.paused) {
+
+document.getElementById("player-control").src = "https://roberthosking.com/wp-content/uploads/2018/09/256-256-7f94cbb88c4da5c5dsdsd4660a475d0d33b6.png";
+    //Its playing...do your job
+audio.pause();
+
+} else {
+
+document.getElementById("player-control").src = "https://roberthosking.com/wp-content/uploads/2018/09/256-256-7f94cbb88c4da5c5d4660a475d0d33b6.png";
+    //Not playing...maybe paused, stopped or never played.
+audio.play();
+
+}
+
+
+
+                 }
+   </script>
+
+<img id='player-control' src="https://roberthosking.com/wp-content/uploads/2018/09/256-256-7f94cbb88c4da5c5dsdsd4660a475d0d33b6.png" onclick="play()" />
+<audio id="audio" src="<?php echo $preview_url; ?>" ></audio>
+
+
+
 <?php endif; ?>
 </div>            
 <p class="track"><?php echo $track[1] ?></p>
